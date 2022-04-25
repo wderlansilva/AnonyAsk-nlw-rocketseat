@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+}
+
+html{
+  --black: #0d114f;
+  --white: #fafafa;
+  --light-blue: #e0ecff;
+  --blue: #3485ff;
+  --red: #e83f5b;
+  --overlay: #040911;
+  --background: #f6faff;
+  --icons-details: #a5b0c1;
+
+  --grey-dark: #4d5e77;
+  --grey-blue: #a1b2cd;
+  --grey-light: #e5eaf1;
+
+
+  /* User agent(Padrão navegador) = 16px, transformar o valor padrão do User agent para 10px e assim ficar mais fácil de aplicar o REM. */
+  font-size: 62.5%;
+}
+
+body{
+  height: 100vh;
+  background: var(--background);
+}
+
+body, button, input, textarea{
+  /* clamp = ("Menor valor possivel", "Valor padrão","Maior valor(Tv, aparelhos grandes") */
+  font-size: clamp(14px, 1.6rem, 2vw);
+
+  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+}
+
+.content{
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* acessibilidade  */
+.sr-only{
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
